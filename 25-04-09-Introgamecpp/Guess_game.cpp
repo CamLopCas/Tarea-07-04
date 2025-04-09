@@ -8,9 +8,15 @@ Informar si lo adivinio o no
 
 int main(void){
     const int NUM = 10;
-    int guesses_number;
+    int guessed_number;
     std::cout << "Adivina un numero entre 1 y 100:\n";
-    std::cin >> guesses_number;
+    std::cin >> guessed_number;
+
+    if (guessed_number == NUM){
+        std::cout << "Ganaste!!!\n";
+    } else {
+        std::cout << "No ganaste, sigue intentando\n";
+    }
 
     return 0;
 }
