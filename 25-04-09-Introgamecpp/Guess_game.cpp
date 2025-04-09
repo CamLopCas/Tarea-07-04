@@ -14,8 +14,10 @@ int main(void){
 
     if (guessed_number == NUM){
         std::cout << "Ganaste!!!\n";
-    } else {
-        std::cout << "No ganaste, sigue intentando\n";
+    } else if (guessed_number > NUM){
+        std::cout << "No ganaste, tu numero es muy grande \n";
+    } else { // es menor
+        std::cout << "Te falta \n";
     }
 
     return 0;
