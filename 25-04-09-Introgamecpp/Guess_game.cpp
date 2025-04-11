@@ -5,13 +5,31 @@ Informar si lo adivinio o no
 */
 
 #include <iostream>
+#include <cstdlib>  // Para rand() y srand()
+#include <ctime>    // Para time()
+
+// Declaracion
+void play( int min_val, int max_val);
+
 
 int main(void){
-    const int NUM = 10;
+    std::srand(std::time(nullptr));
+    play(1,100);
+    play(2,22);
+
+    return 0;
+}
+
+//Implementacion
+void play( int min_val, int max_val)
+{
+    const int NUM = min_val + std::rand() % (max_val - min_val + 1);
     int guessed_number = NUM/2;
 
-    const int MIN = 1;
-    const int MAX = 100;
+    const int MIN = min_val;
+    const int MAX = max_val;
+
+    std::cout << "INICIA EL JUEGO \n";
 
     while(guessed_number != NUM ){
         std::cout << "Adivina un numero entre "<< MIN <<" y "<< MAX <<":\n";
@@ -33,6 +51,4 @@ int main(void){
             std::cout << "Te falta \n";
         }
     }
-
-    return 0;
 }
