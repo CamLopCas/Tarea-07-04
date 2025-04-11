@@ -5,15 +5,13 @@ Informar si lo adivinio o no
 */
 
 #include <iostream>
-#include <cstdlib>  // Para rand() y srand()
-#include <ctime>    // Para time()
+#include <random>
 
 // Declaracion
 void play( int min_val, int max_val);
 
 
 int main(void){
-    std::srand(std::time(nullptr));
     play(1,100);
     play(2,22);
 
@@ -22,8 +20,11 @@ int main(void){
 
 //Implementacion
 void play( int min_val, int max_val)
-{
-    const int NUM = min_val + std::rand() % (max_val - min_val + 1);
+{   std::random_device rd;
+    std::mt19937 gen(10);
+    std::uniform_int_distribution<int> distro(min_val, max_val)
+
+    const int NUM = distro(gen);
     int guessed_number = NUM/2;
 
     const int MIN = min_val;
