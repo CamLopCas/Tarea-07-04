@@ -10,19 +10,18 @@ int main(void){
     const int NUM = 10;
     int guessed_number = NUM/2;
 
+    const int MIN = 1;
+    const int MAX = 100;
+
     while(guessed_number != NUM ){
-        std::cout << "Adivina un numero entre 1 y 100:\n";
+        std::cout << "Adivina un numero entre "<< MIN <<" y "<< MAX <<":\n";
         std::cin >> guessed_number;
         std::cout << "Escribiste: " << guessed_number <<"\n";
 
         // Validacion del rango
 
-        if (guessed_number < 0){
-            std::cout << "Recuerda entre 1 y 100, NUMEROS POSITIVOS \n";
-            continue;
-        }
-        if (guessed_number > 100){
-            std::cout << "Recuerda entre 1 y 100. \n";
+        if (guessed_number < MIN or MAX < guessed_number){
+            std::cout << "Recuerda entre 1 y 100 \n";
             continue;
         }
         if (guessed_number == NUM){
