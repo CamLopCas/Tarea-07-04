@@ -7,10 +7,10 @@ void test(void);
 
 int main(void){
     
-    for(int ii = 300; ii <= 400-4; ++ii) {
+    for(int ii = 300; ii <= 450-6; ++ii) {
         if (isprime(ii) == true) {
-            if(isprime(ii) == true and isprime(ii+4)==true){
-            std::cout << "(" << ii  << ", " << ii+4 << ")\n";
+            if(isprime(ii) == true and isprime(ii+6)==true){
+            std::cout << "(" << ii  << ", " << ii+6 << ")\n";
             }
         }
     }
