@@ -1,13 +1,13 @@
 #include <iostream>
 #include <cmath> // Para std::fabs (valor absoluto para floats)
 
-using namespace std;
+
 
 /**
  * Calcula la raíz cuadrada usando el método babilónico
- * @param S Número al que se le calculará la raíz
- * @param iteraciones Número de repeticiones del algoritmo
- * @return Aproximación de la raíz cuadrada de S
+ *  S Número al que se le calculará la raíz
+ *  iteraciones Número de repeticiones del algoritmo
+ *  Aproximación de la raíz cuadrada de S
  */
 double raiz_babilonica(double S, int iteraciones) {
     // Estimación inicial (puede ser S/2.0 o cualquier valor positivo)
@@ -26,22 +26,22 @@ int main() {
     int iteraciones;
     
     // Entrada de datos
-    cout << "Ingrese el número para calcular su raíz cuadrada: ";
-    cin >> numero;
+    std::cout << "Ingrese el número para calcular su raíz cuadrada: ";
+    std::cin >> numero;
     
-    cout << "Ingrese el número de iteraciones: ";
-    cin >> iteraciones;
+    std::cout << "Ingrese el número de iteraciones: ";
+    std::cin >> iteraciones;
     
     // Configuración de formato de salida
-    cout.setf(ios::scientific); // Notación científica
-    cout.precision(15);         // 15 dígitos decimales
+    std::cout.setf(std::ios::scientific); // Notación científica
+    std::cout.precision(15);         // 15 dígitos decimales
     
     // Cálculo y muestra de resultados
     double resultado = raiz_babilonica(numero, iteraciones);
-    cout << "La raíz cuadrada aproximada es: " << resultado << endl;
+    std::cout << "La raíz cuadrada aproximada es: " << resultado << "\n";
     
     // Comparación con el valor exacto (opcional)
-    cout << "Valor exacto (sqrt): " << sqrt(numero) << endl;
+    std::cout << "Valor exacto (sqrt): " << std::sqrt(numero) << "\n";
     
     return 0;
 }

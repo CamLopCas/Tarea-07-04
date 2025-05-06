@@ -1,13 +1,13 @@
 #include <iostream>
-using namespace std;
+
 
 int main() {
     // Declaración de variables
     int numero_ingresado; // Almacena el número que ingresa el usuario
     
     // Solicitar entrada al usuario
-    cout << "Ingrese un numero: ";
-    cin >> numero_ingresado;
+    std::cout << "Ingrese un numero: ";
+    std::cin >> numero_ingresado;
     
     // Contar la cantidad de dígitos del número
     int copia_numero = numero_ingresado; // Copia para no modificar el original
@@ -30,16 +30,16 @@ int main() {
     }
     
     // Mostrar los dígitos separados por espacios
-    cout << "Digitos separados: ";
+    std::cout << "Digitos separados: ";
     for (int i = 0; i < cantidad_digitos; i++) {
-        cout << digitos[i]; // Imprime el dígito actual
+        std::cout << digitos[i]; // Imprime el dígito actual
         
         // Agrega espacio si no es el último dígito
         if (i < cantidad_digitos - 1) {
-            cout << " ";
+            std::cout << " ";
         }
     }
-    cout << endl; // Salto de línea final
+    std::cout << "\n"; // Salto de línea final
     
     return 0; // Indica que el programa terminó correctamente
 }
